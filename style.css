@@ -1,0 +1,68 @@
+html {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  padding: 1%;
+  background: rgb(224, 214, 248);
+  background-image: linear-gradient(white 0.1em, transparent 0.1em),
+    linear-gradient(90deg, white 0.1em, transparent 0.1em);
+  background-size: 35px 35px;
+}
+
+/*--------------------NAV BAR----------------------*/
+
+nav {
+  width: 85vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: ivory;
+}
+
+#menu {
+  background-color: khaki;
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: right;
+  text-decoration: none;
+}
+
+.menu-items {
+  text-decoration: none;
+  list-style: none;
+  padding-left: 80px;
+}
+
+@media only screen and (max-width: 635px) {
+  #menu {
+    display: none;
+  }
+}
+
+/*--------------------CONTENT----------------------*/
+
+.section-containers {
+  background: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  width: 85vw;
+  min-height: 70vh;
+}
+
+/*--------------------FOOTER----------------------*/
+
+footer {
+  width: 85vw;
+  min-height: 30vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: wheat;
+}

@@ -57,6 +57,100 @@ nav {
   position: relative;
 }
 
+/*------------------MEMORY GAME--------------------*/
+
+#section1 {
+  height: 55vh;
+  width: 50vw;
+}
+
+#table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(235, 206, 220);
+  border-radius: 20px;
+  box-shadow: 3px 3px 7px rgba(119, 46, 46, 0.2);
+  width: 450px;
+  height: 450px;
+  padding: 20px;
+  perspective: 1000px; /*property sets how far in the z plane the object is from the user. The lower the value the bigger the perspective effect.*/
+}
+
+.cards {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  margin: 3px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 7px rgba(119, 46, 46, 0.2);
+  position: relative;
+  transform-style: preserve-3d; /*to position them in the 3D space created in the parent, instead of flattening it to the z = 0 plane*/
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.cards:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  transition: transform 0.5s;
+}
+
+.back {
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  background: repeating-linear-gradient(
+    45deg,
+    #d9d9db,
+    #d9d9db 10px,
+    #ffffff 10px,
+    #ffffff 20px
+  );
+}
+
+.front {
+  position: absolute;
+  width: 70%;
+  margin: 15%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+#description-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.description {
+  max-width: 390px;
+  height: 400px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.082);
+}
+
 /*----------------PROJECT CAROUSEL------------------*/
 
 #project-carousel {

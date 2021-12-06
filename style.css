@@ -54,6 +54,95 @@ nav {
   margin-top: 10vh;
   width: 85vw;
   min-height: 70vh;
+  position: relative;
+}
+
+/*----------------PROJECT CAROUSEL------------------*/
+
+#project-carousel {
+  background-color: lavenderblush;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /*  translate moves an element up and down or side-to-side: By indicating one value, you move the element to the right side. Negative values move elements to the left.*/
+}
+
+.projects {
+  background-color: white;
+  border: 2px solid grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 60vh;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  z-index: -1;
+  opacity: 0;
+}
+
+.active {
+  background-color: white;
+  z-index: 90;
+  opacity: 1;
+  box-shadow: 3px 3px 7px rgba(111, 46, 119, 0.2);
+}
+
+.prev {
+  background-color: white;
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(-75%, -50%);
+}
+
+.next {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(-25%, -50%);
+}
+#project-navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  z-index: 100;
+}
+
+.arrow-button {
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.5;
+}
+
+.arrow-button:hover {
+  opacity: 1;
+}
+
+.arrow-button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: grey;
+  z-index: -99;
+}
+
+#button-left {
+  float: left;
+}
+
+#button-right {
+  float: right;
 }
 
 /*--------------------FOOTER----------------------*/

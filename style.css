@@ -2,6 +2,7 @@ html {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Poppins", sans-serif;
   font-family: "Raleway", sans-serif;
+  color: rgb(106, 91, 110);
 }
 
 body {
@@ -19,26 +20,35 @@ nav {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: ivory;
 }
 
 #menu {
-  background-color: khaki;
   width: inherit;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: right;
   text-decoration: none;
+  margin-top: 15px;
 }
 
 .menu-items {
   text-decoration: none;
   list-style: none;
   padding-left: 80px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: rgb(251, 77, 61);
+  text-shadow: 1.5px 1.5px rgb(106, 91, 110, 0.6);
 }
 
-@media only screen and (max-width: 635px) {
+.menu-link {
+  text-decoration: none;
+  color: rgb(251, 77, 61);
+}
+
+@media only screen and (max-width: 750px) {
   #menu {
     display: none;
   }
@@ -51,17 +61,56 @@ nav {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10vh;
+  margin-top: 3vh;
   width: 85vw;
   min-height: 70vh;
   position: relative;
+  box-shadow: 13px 13px rgba(106, 91, 110, 0.8);
+}
+
+h2 {
+  width: 85vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15vh;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: rgb(251, 77, 61);
+  text-shadow: 1.5px 1.5px rgb(106, 91, 110, 0.6);
+}
+
+/*--------------------WELCOME----------------------*/
+
+#welcome-container {
+  margin-top: 8vh;
 }
 
 /*------------------MEMORY GAME--------------------*/
 
 #section1 {
-  height: 55vh;
-  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#first-column {
+  width: 550px;
+  height: 550px;
+  background-color: transparent;
+  position: relative;
+  overflow: scroll;
+}
+
+#second-column {
+  width: 550px;
+  height: 550px;
+  background-color: white;
+  position: relative;
+  box-shadow: 11px 11px rgba(106, 91, 110, 0.8);
 }
 
 #table {

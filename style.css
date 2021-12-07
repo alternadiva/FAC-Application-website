@@ -3,6 +3,7 @@ html {
   font-family: "Poppins", sans-serif;
   font-family: "Raleway", sans-serif;
   color: rgb(106, 91, 110);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,7 +28,7 @@ nav {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: right;
+  justify-content: end;
   text-decoration: none;
   margin-top: 15px;
 }
@@ -35,6 +36,7 @@ nav {
 .menu-items {
   text-decoration: none;
   list-style: none;
+  text-align-last: right;
   padding-left: 80px;
   font-size: 1.3rem;
   font-weight: 500;
@@ -100,9 +102,10 @@ h2 {
 #first-column {
   width: 550px;
   height: 550px;
-  background-color: transparent;
+  background-color: white;
   position: relative;
   overflow: scroll;
+  box-shadow: 11px 11px rgba(106, 91, 110, 0.8);
 }
 
 #second-column {
@@ -122,9 +125,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-color: rgb(235, 206, 220);
-  border-radius: 20px;
-  box-shadow: 3px 3px 7px rgba(119, 46, 46, 0.2);
+  background-color: white;
   width: 450px;
   height: 450px;
   padding: 20px;
@@ -136,7 +137,6 @@ h2 {
   height: 100px;
   width: 100px;
   margin: 3px;
-  border-radius: 8px;
   box-shadow: 3px 3px 7px rgba(119, 46, 46, 0.2);
   position: relative;
   transform-style: preserve-3d; /*to position them in the 3D space created in the parent, instead of flattening it to the z = 0 plane*/
@@ -153,18 +153,12 @@ h2 {
 .back {
   position: absolute;
   backface-visibility: hidden;
-  border-radius: 8px;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   width: 100%;
   height: 100%;
   margin: 0;
-
-  background: repeating-linear-gradient(
-    45deg,
-    #d9d9db,
-    #d9d9db 10px,
-    #ffffff 10px,
-    #ffffff 20px
-  );
+  background: rgb(170, 223, 171);
 }
 
 .front {
@@ -173,10 +167,12 @@ h2 {
   margin: 15%;
   backface-visibility: hidden;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 .flip {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 #description-container {
@@ -247,6 +243,7 @@ h2 {
   opacity: 0.25;
   transform: translate(-25%, -50%);
 }
+
 #project-navigation {
   position: absolute;
   top: 50%;
@@ -286,6 +283,34 @@ h2 {
 
 #button-right {
   float: right;
+}
+
+/*---------------------LINKS----------------------*/
+#section3 {
+  width: 50vw;
+  min-height: 40vh;
+}
+
+#link-container {
+  width: 50vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.link-icons {
+  background-color: rgb(170, 223, 171);
+  width: 85px;
+  height: 85px;
+  margin: 5px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 4.5rem;
+  box-shadow: 5px 5px rgba(106, 91, 110, 0.8);
 }
 
 /*--------------------FOOTER----------------------*/

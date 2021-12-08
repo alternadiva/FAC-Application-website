@@ -1,3 +1,14 @@
+const hamburger = document.getElementsByClassName("hamburger-menu");
+
+window.onscroll = function() {menuAppear()};
+
+function menuAppear() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        hamburger.style.display = "block";
+    }
+}
+
+
 /*-----------------------MEMORY GAME------------------------*/
 
 const table = document.getElementById("table");
@@ -118,7 +129,7 @@ const projects = document.querySelectorAll(".projects");
 const buttons = document.querySelectorAll(".arrow-button");
 
 let current = 0;
-let prev = 8;
+let prev = 7;
 let next = 1;
 
 function slide() {
@@ -140,7 +151,7 @@ function previousProject() {
 }
 
 function nextProject() {
-    if (current < 8) {
+    if (current < 7) {
         changeOrder(current + 1)
     }
     else {
@@ -159,12 +170,12 @@ function changeOrder(place) {
         projects[i].classList.remove("next");
     }
 
-    if (next === 9) {
+    if (next === 8) {
         next = 0;
     }
 
     if (prev === -1) {
-        prev = 8;
+        prev = 7;
     }
 
     projects[current].classList.add("active");

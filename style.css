@@ -60,6 +60,21 @@ nav {
   }
 }
 
+#hamburger-menu {
+  background-color: rgb(106, 91, 110);
+  color: white;
+  box-shadow: 3px 3px white;
+  font-size: 35px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 5px 10px;
+  width: auto;
+  z-index: 200;
+  cursor: pointer;
+}
+
 /*--------------------CONTENT----------------------*/
 
 .section-containers {
@@ -200,6 +215,24 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.082);
+  overflow: scroll;
+  text-align: center;
+}
+
+.description-icon {
+  width: 5vw;
+}
+
+.description-p {
+  text-align: justify;
+  font-size: clamp(0.8rem, 0.6909rem + 0.4364vw, 1.1rem);
+  line-height: 1.5;
+}
+
+.description-images {
+  width: 70%;
+  margin-top: 10px;
+  box-shadow: 3px 3px 7px rgba(119, 46, 46, 0.2);
 }
 
 /*----------------PROJECT CAROUSEL------------------*/
@@ -332,7 +365,7 @@ h2 {
 #project-img2 {
   padding-top: 90px;
   padding-right: 20%;
-  width: 80%;
+  width: 60%;
   filter: grayscale(100%);
 }
 

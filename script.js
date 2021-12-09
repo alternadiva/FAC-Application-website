@@ -1,13 +1,16 @@
-const hamburger = document.getElementsByClassName("hamburger-menu");
+/*-----------------------HAMBURGER MENU------------------------*/
 
-window.onscroll = function() {menuAppear()};
+let hamburgerMenu = document.getElementById("hamburger-menu");
 
-function menuAppear() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        hamburger.style.display = "block";
-    }
+function menuOnScroll() {
+  if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+    hamburgerMenu.removeAttribute('hidden', '');
+  } else {
+    hamburgerMenu.setAttribute('hidden','');
+  }
 }
 
+window.addEventListener("scroll", menuOnScroll);
 
 /*-----------------------MEMORY GAME------------------------*/
 

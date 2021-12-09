@@ -1,16 +1,29 @@
 /*-----------------------HAMBURGER MENU------------------------*/
 
-let hamburgerMenu = document.getElementById("hamburger-menu");
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const menuItems = document.getElementById("hamb-menu-items");
+const closeMenuButton = document.getElementById("close-menu");
 
 function menuOnScroll() {
   if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
     hamburgerMenu.removeAttribute('hidden', '');
   } else {
     hamburgerMenu.setAttribute('hidden','');
+    menuItems.setAttribute('hidden', '');
   }
 }
 
+function openMenu() {
+    menuItems.removeAttribute('hidden', '');
+}
+
+function closeMenu() {
+    menuItems.setAttribute('hidden', '');
+}
+
 window.addEventListener("scroll", menuOnScroll);
+hamburgerMenu.addEventListener("click", openMenu);
+closeMenuButton.addEventListener("click", closeMenu);
 
 /*-----------------------MEMORY GAME------------------------*/
 

@@ -653,5 +653,11 @@ footer {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background: wheat;
+  margin-top: 200px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: rgb(251, 77, 61);
+  text-shadow: 1.5px 1.5px rgb(106, 91, 110, 0.6);
 }

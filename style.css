@@ -395,6 +395,14 @@ hr {
   color: white;
 }
 
+#mclaren {
+  color: rgb(249, 142, 29);
+}
+
+#what-learnt {
+  text-align: left;
+}
+
 .description-icon {
   width: 5vw;
 }

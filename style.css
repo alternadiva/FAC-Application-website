@@ -155,11 +155,66 @@ h2 {
 }
 
 #welcome-message {
+  position: relative;
   background-color: rgb(170, 223, 171, 0.6);
   width: 80vw;
   height: 65vh;
   display: block;
   margin: 0 auto 0 auto;
+}
+
+#hello-welcome {
+  position: absolute;
+  padding: 0;
+  left: 5%;
+  font-size: clamp(2rem, 0rem + 8vw, 6rem);
+  font-weight: 500;
+
+  font-family: "Poppins", sans-serif;
+  color: rgb(251, 77, 61);
+  text-shadow: 3px 3px rgb(106, 91, 110, 0.6);
+}
+
+hr {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 40vw;
+  border: 2px solid white;
+  box-shadow: 3px 3px rgba(106, 91, 110, 0.8);
+  font-weight: 800;
+  animation: line-anim 10s infinite;
+}
+
+@-webkit-keyframes line-anim {
+  0% {
+    width: 50%;
+  }
+  50% {
+    width: 50%;
+  }
+  80% {
+    width: 0px;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+#welcome-p1 {
+  position: absolute;
+  top: 60%;
+  color: white;
+  left: 5%;
+  font-family: "Poppins", sans-serif;
+}
+
+#welcome-p2 {
+  position: absolute;
+  top: 75%;
+  color: white;
+  left: 5%;
+  font-family: "Poppins", sans-serif;
 }
 
 /*------------------MEMORY GAME--------------------*/

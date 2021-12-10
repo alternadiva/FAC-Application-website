@@ -41,7 +41,9 @@
 
     <main>
         <section class="section-containers" id="welcome-container">
-            <p>Welcome</p>
+            <div id="welcome-message">
+
+            </div>
         </section>
 
         <h2 id="about-me">about me</h2>
@@ -113,41 +115,32 @@
                         <p class="back"></p>
                         <img class="front" src="./icons/racing-car.png" alt="racing car icon">
                     </div>
+
+                    <div id="game-start">
+                        <button id="game-start-button">start</button>
+                    </div>
                 </div>
             </div>
 
             <div id="second-column">
-                <p> second box</p>
+                <div id="game-rules">
+                    <h3>Memory Card Game</h3>
+                    <p id=""> Get to know me and the reasons for my application by playing the memory card game</p>
+                    <p>Instructions: </p>
+                    <ul>
+                        <li>Press the Start button. </li>
+                        <li>Flip two cards. </li>
+                        <li>Find a match to reveal information about me.</li>
+                        <li>Close the information window.</li>
+                        <li>Find a new pair.</li>
+                    </ul>
 
-                <div id="description-container">
-                    <div class="description" data-id='card1' hidden>
-                        <p class="close-button">X</p>
-                        <img class="description-icon" src="./icons/candle.png" alt="candle icon">
-                        <p class="description-p">Lockdown made me pour candles. As the isolation period caused by the
-                            global
-                            pandemic forced
-                            people to find comfort in new daily activities, I found creating decorative and homely
-                            objects
-                            peaceful, so I started to pour sculptural candles. I still love creating them, especially
-                            for
-                            family and friends.
-                        </p>
-                        <img src="./images/candles/1.JPG" alt="gingerbread house candles" class="description-images">
-                        <img src="./images/candles/2.JPG" alt="pine cone candles" class="description-images">
-                        <img src="./images/candles/3.JPG" alt="gingerbread wax melts" class="description-images">
-                        <img src="./images/candles/4.JPG" alt="a shell shaped candles" class="description-images">
-                    </div>
+                    <p>If you do not wish to play the game, but still want to get to know me, please click
+                        <span id="open-all-description">here</span>!
+                    </p>
+                </div>
 
-                    <div class="description" data-id='card2' hidden>
-                        <p class="close-button">X</p>
-                        <img class="description-icon" src="./icons/paw.png" alt="paw icon">
-                        <p class="description-p">
-                            This is my best friend, Guba. She is a mix-breed dog, although she can be easily mistaken
-                            for a furry rug. :)
-                        </p>
-                        <img src="./images/guba.jpg" alt="Guba, the dog" class="description-images">
-                    </div>
-
+                <div id="description-container" hidden>
                     <div class="description" data-id='card3' hidden>
                         <p class="close-button">X</p>
                         <img class="description-icon" src="./icons/me.png" alt="user icon">
@@ -206,15 +199,6 @@
                         </p>
                     </div>
 
-                    <div class="description" data-id='card5' hidden>
-                        <p class="close-button">X</p>
-                        <img class="description-icon" src="./icons/knowlegde.png" alt="gears icon">
-                        <h4>What I've learnt during the proccess of creating this feature</h4>
-                        <p class="description-p">
-                        </p>
-                        <img src="" alt="" class="description-images">
-                    </div>
-
                     <div class="description" data-id='card6' hidden>
                         <p class="close-button">X</p>
                         <img class="description-icon" src="./icons/coding.png" alt="window icon">
@@ -241,9 +225,41 @@
                         </p>
                     </div>
 
+                    <div class="description" data-id='card1' hidden>
+                        <p class="close-button">X</p>
+                        <img class="description-icon" src="./icons/candle.png" alt="candle icon">
+                        <h4>Lockdown made me pour candles.</h4>
+                        <p class="description-p"> As the isolation period caused by the
+                            global
+                            pandemic forced
+                            people to find comfort in new daily activities, I found creating decorative and homely
+                            objects
+                            peaceful, so I started to pour sculptural candles. I still love creating them, especially
+                            for
+                            family and friends.
+                        </p>
+                        <img src="./images/candles/1.JPG" alt="gingerbread house candles" class="description-images">
+                        <img src="./images/candles/2.JPG" alt="pine cone candles" class="description-images">
+                        <img src="./images/candles/3.JPG" alt="gingerbread wax melts" class="description-images">
+                        <img src="./images/candles/4.JPG" alt="a shell shaped candles" class="description-images">
+                    </div>
+
+                    <div class="description" data-id='card2' hidden>
+                        <p class="close-button">X</p>
+                        <img class="description-icon" src="./icons/paw.png" alt="paw icon">
+                        <h4>Furry Friend</h4>
+                        <p class="description-p">
+                            This is my best friend, Guba. She is a mix-breed dog, although she can be easily mistaken
+                            for a furry rug. :)
+                        </p>
+                        <img src="./images/guba.jpg" alt="Guba, the dog" class="description-images">
+                    </div>
+
+
                     <div class="description" data-id='card7' hidden>
                         <p class="close-button">X</p>
                         <img class="description-icon" src="./icons/softball.png" alt="softball icon">
+                        <h4>Softball</h4>
                         <p class="description-p">Softball
                         </p>
                         <img src="" alt="" class="description-images">
@@ -252,7 +268,17 @@
                     <div class="description" data-id='card8' hidden>
                         <p class="close-button">X</p>
                         <img class="description-icon" src="./icons/racing-car.png" alt="racing car icon">
+                        <h4>Motorsport</h4>
                         <p class="description-p">Formula 1
+                        </p>
+                        <img src="" alt="" class="description-images">
+                    </div>
+
+                    <div class="description" data-id='card5' hidden>
+                        <p class="close-button">X</p>
+                        <img class="description-icon" src="./icons/knowlegde.png" alt="gears icon">
+                        <h4>What I've learnt during the proccess of creating this feature</h4>
+                        <p class="description-p">
                         </p>
                         <img src="" alt="" class="description-images">
                     </div>

@@ -45,6 +45,11 @@ nav {
   text-shadow: 1.5px 1.5px rgb(106, 91, 110, 0.6);
 }
 
+.menu-items:active {
+  transform: scale(0.9);
+  transition: transform 0.2s;
+}
+
 .menu-link {
   text-decoration: none;
   color: rgb(251, 77, 61);
@@ -104,6 +109,11 @@ nav {
   margin-top: 30px;
 }
 
+.hamb-items:active {
+  transform: scale(0.98);
+  transition: transform 0.2s;
+}
+
 #close-menu {
   font-size: 1.3rem;
   color: white;
@@ -140,6 +150,16 @@ h2 {
 
 #welcome-container {
   margin-top: 8vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-top: 3%;
+}
+
+#welcome-message {
+  background-color: rgb(170, 223, 171, 0.6);
+  width: 80vw;
+  height: 65vh;
+  display: block;
+  margin: 0 auto 0 auto;
 }
 
 /*------------------MEMORY GAME--------------------*/
@@ -168,6 +188,38 @@ h2 {
   background-color: white;
   position: relative;
   box-shadow: 11px 11px rgba(106, 91, 110, 0.8);
+}
+
+#game-start {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 400px;
+  width: 485px;
+  height: 485px;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 105;
+}
+
+#game-start-button {
+  display: block;
+  margin: 47% auto;
+  width: 15vw;
+  padding: 1.5vh 0;
+  background: rgba(106, 91, 110, 0.9);
+  border: none;
+  box-shadow: 4px 4px rgb(251, 77, 61);
+  color: rgb(170, 223, 171);
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-shadow: 1.5px 1.5px rgba(106, 91, 110);
+  cursor: pointer;
+  visibility: visible;
+}
+
+#game-start-button:active {
+  transform: scale(0.98);
+  transition: transform 0.5s;
 }
 
 #table {
@@ -231,27 +283,61 @@ h2 {
   -webkit-transform: rotateY(180deg);
 }
 
+#game-rules {
+  margin: 15%;
+  text-align: justify;
+}
+
+#game-rules h3 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: rgb(170, 223, 171);
+}
+
+#open-all-description {
+  color: rgb(251, 77, 61);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#open-all-description:hover {
+  color: rgb(170, 223, 171);
+}
+
 #description-container {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
+  height: 100%;
   transform: translate(-50%, -50%);
-  width: 100vw;
   margin: 0;
   padding: 0;
+  overflow-x: scroll;
+  overflow-x: scroll;
 }
 
 .description {
-  max-width: 390px;
-  height: 400px;
+  max-width: inherit;
+  height: 100%;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.082);
+  margin: 10px;
   overflow: scroll;
   text-align: center;
+}
+
+.close-button {
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  right: 5%;
+  text-align: center;
+  font-size: 1.2rem;
+  width: 40px;
+  padding: 10px 0;
+  background-color: rgb(106, 91, 110);
+  color: white;
 }
 
 .description-icon {
@@ -271,6 +357,11 @@ h2 {
 }
 
 /*----------------PROJECT CAROUSEL------------------*/
+
+#section2 {
+  background-color: transparent;
+  box-shadow: none;
+}
 
 #project-carousel {
   position: absolute;
@@ -302,20 +393,22 @@ h2 {
   background-color: white;
   z-index: 90;
   opacity: 1;
-  box-shadow: 8px 8px rgba(106, 91, 110, 0.6);
+  box-shadow: 8px 8px rgba(106, 91, 110);
 }
 
 .prev {
   background-color: white;
   z-index: 2;
-  opacity: 0.25;
+  opacity: 0.95;
   transform: translate(-75%, -50%);
+  box-shadow: 4px 4px rgba(106, 91, 110, 0.8);
 }
 
 .next {
   z-index: 2;
-  opacity: 0.25;
+  opacity: 0.95;
   transform: translate(-25%, -50%);
+  box-shadow: 4px 4px rgba(106, 91, 110, 0.8);
 }
 
 #project-navigation {
@@ -490,6 +583,11 @@ h2 {
 
 .link-icons:hover .tooltiptext-links {
   visibility: visible;
+}
+
+.link-icons:active {
+  transform: scale(0.95);
+  transition: transform 0.2s;
 }
 
 /*--------------------FOOTER----------------------*/

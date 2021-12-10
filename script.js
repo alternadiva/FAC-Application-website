@@ -33,7 +33,12 @@ const cardOrder = table.children;
 
 const descriptions = document.querySelectorAll(".description");
 let description;
-const closeButton = document.querySelectorAll(".close-button")
+const openAllDescription = document.getElementById("open-all-description");
+const descriptionContainer = document.getElementById("description-container");
+const closeButton = document.querySelectorAll(".close-button");
+
+const startingWindow = document.getElementById("game-start");
+const startButton = document.getElementById("game-start-button");
 
 let fragment = document.createDocumentFragment(); //This method creates the document fragment, then append the elements of the document to the document fragment and make the changes according to the need. It is a safe method and thus prevents destroying of the DOM structure.
 
@@ -123,7 +128,10 @@ function popUpDescription() {
     for (let i = 0; i < descriptions.length; i++) {
         if (descriptions[i].dataset.id === firstData) {
             setTimeout(function () {
+                descriptionContainer.removeAttribute('hidden', '');
                 descriptions[i].removeAttribute('hidden', '');
+                startingWindow.removeAttribute('hidden', '');
+                startButton.style.visibility = "hidden";
             }, 1000);
             description = descriptions[i];
         }
@@ -132,9 +140,28 @@ function popUpDescription() {
 
 function closeDescription() {
     description.setAttribute('hidden','');
+    startingWindow.setAttribute('hidden', '');
+    descriptionContainer.setAttribute('hidden', '')
+}
+
+function startGame() {
+    startingWindow.setAttribute('hidden', '');
+}
+
+function showAllDescription() {
+    descriptions.forEach(x => x.removeAttribute('hidden',''));
+    descriptionContainer.removeAttribute('hidden','');
+    for (let i = 0; i < descriptions.length; i++) {
+        descriptions[i].style.height = "auto";
+    }
+    startingWindow.removeAttribute('hidden', '');
+    startButton.style.visibility = 'hidden';
+    closeButton.forEach(x => x.setAttribute('hidden', ''));
 }
 
 closeButton.forEach(x => x.addEventListener('click', closeDescription));
+startButton.addEventListener("click", startGame);
+openAllDescription.addEventListener("click", showAllDescription);
 
 
 
